@@ -1,0 +1,8 @@
+<h1>Welcome to the Craggy Island Magic 8 Ball<h1>
+
+<p> Ask the Craggy Islanders a question<p>
+
+ <textarea></textarea>
+ </br>
+
+<a href="/answer">Get the answer</a>

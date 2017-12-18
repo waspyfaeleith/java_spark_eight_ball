@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CraggyIslandAPI.iml" filepath="$PROJECT_DIR$/.idea/modules/CraggyIslandAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CraggyIslandAPI_main.iml" filepath="$PROJECT_DIR$/.idea/modules/CraggyIslandAPI_main.iml" group="CraggyIslandAPI" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CraggyIslandAPI_test.iml" filepath="$PROJECT_DIR$/.idea/modules/CraggyIslandAPI_test.iml" group="CraggyIslandAPI" />
+    </modules>
+  </component>
+</project>
