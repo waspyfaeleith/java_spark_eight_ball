@@ -6,8 +6,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class APIConnection {
@@ -40,13 +38,7 @@ public class APIConnection {
         TypeToken<AnswerList> answerList = new TypeToken<AnswerList>() {};
         AnswerList answerList1 = gson.fromJson(answersFromAPI, answerList.getType());
 
-//        for (APIConnection.APIConnection.Answer answer : answerList1.answers)
-//        {
-//            System.out.println(answer.getId() + " : " + answer.getText());
-//        }
-
         Answer randomAnswer = answerList1.getRandomAnswer();
-        //System.out.println(randomAnswer.getText());
         return randomAnswer;
     }
 

@@ -2,8 +2,10 @@ package Controllers;
 import APIConnection.*;
 
 import static spark.Spark.get;
-import spark.Request;
-import spark.Response;
+import static spark.Spark.staticFileLocation;
+
+//import spark.Request;
+//import spark.Response;
 
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
@@ -15,19 +17,24 @@ public class Main {
 
 
     public static void main(String[] args) {
-        get("/hello", (req, res) -> "Hello World");
+        staticFileLocation("/public");
+
+        String layout = "templates/layout.vtl";
+        //get("/hello", (req, res) -> "Hello World");
 
         get("/", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
-            return new ModelAndView(model, "main.vm");
+            model.put("template", "templates/main.vm" );
+            return new ModelAndView(model, layout);
         },new VelocityTemplateEngine());
 
         get("/answer", (req, res) -> {
             APIConnection connection = new APIConnection();
             Answer answer = connection.getAnswerFromApi();
             Map<String, Object> model = new HashMap<>();
-            model.put("answer", answer.getText());
-            return new ModelAndView(model, "answer.vm");
+            model.put("template", "templates/answer.vm" );
+            model.put("answer", answer);
+            return new ModelAndView(model, layout);
         },new VelocityTemplateEngine());
     }
 }

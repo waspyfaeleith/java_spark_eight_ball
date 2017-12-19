@@ -5,10 +5,10 @@ public class Answer {
     private String text;
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public String getText() {
-        return text;
+        return this.text;
     }
 }

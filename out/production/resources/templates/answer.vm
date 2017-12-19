@@ -1,0 +1,3 @@
+<p class="answerIntro">The Craggy Islanders say:</p>
+
+<p class="answer">$answer.getText()</p>
